@@ -1,0 +1,5 @@
+
+<launch>
+<include file="$(find uadr_launches)/launch/hardware.launch"/>
+<include file="$(find uadr_launches)/launch/csm.launch"/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/dawid/Pafnutij/patia_ws/install
+
+Name: uadr_launches
+Description: Description of uadr_launches
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/dawid/Pafnutij/patia_ws/install/lib 
+Requires: 
