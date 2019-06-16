@@ -73,7 +73,7 @@ rospy.init_node("atmega_driver")
 rospy.Subscriber("cmd_vel", Twist, cmd_vel_callback)
 rate = rospy.Rate(3)
 while not rospy.is_shutdown():
-    if rospy.get_time() - last_update:
+    if rospy.get_time() - last_update > 0.7:
         set_wheels(0, 0, 0)
     rate.sleep()
 # set_wheels(1, -1, -1)
