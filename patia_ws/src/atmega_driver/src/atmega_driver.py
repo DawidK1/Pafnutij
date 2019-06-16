@@ -27,7 +27,11 @@ def set_wheels(left, right, caster):
     bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1)*128))
 
 
-for i in numpy.linspace(-1, 1, 60):
-    set_wheels(i, i, i)
-    sleep(1.0)
+# for i in numpy.linspace(-1, 1, 60):
+#     set_wheels(i, i, i)
+#     sleep(1.0)
+set_wheels(0, 0, 0)
+
+set_wheels(1, 1, 0)
+sleep(5)
 set_wheels(0, 0, 0)
