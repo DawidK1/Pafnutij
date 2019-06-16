@@ -1,0 +1,49 @@
+base_global_planner: global_planner/GlobalPlanner
+base_local_planner: dwa_local_planner/DWAPlannerROS
+clearing_rotation_allowed: false
+conservative_reset_dist: 15.0
+controller_frequency: 10.0
+controller_patience: 10.0
+oscillation_distance: 0.1
+oscillation_timeout: 10.0
+planner_frequency: 0.3
+recovery_behavior_enabled: true
+shutdown_costmaps: false
+max_planning_retries: 5
+
+GlobalPlanner:
+  allow_unknown:        false
+  default_tolerance:    0.0
+
+
+
+recovery_behaviors:
+#  - name: car_maneuver_recovery
+#    type: car_maneuver_recovery/CarManeuverRecovery
+  - name: conservative_reset
+    type: clear_costmap_recovery/ClearCostmapRecovery
+  # - name: wall_recovery
+  #   type: wall_recovery/WallRecovery
+
+  # car_maneuver_recovery parameters
+# car_maneuver_recovery:
+#   four_wheel_steering: False
+#   crab_steering: False
+#   recovery_speed: 0.3
+#   recovery_steering_angle: 0.1
+#   wheelbase: 0.52
+#   escape_cost_threshold: 110
+#   timeout: 15.0
+#   display_costs: True
+
+#   # wall_maneuver_recovery parameters
+# wall_recovery:
+#   recovery_speed: 0.4
+#   recovery_steering_angle: 0.55
+#   linear_cost_threshold: 130
+#   angular_cost_threshold: 140
+#   display_costs: True
+#   timeout: 10.0
+#   rotate_max_time: 4.0
+#   moving_max_time: 5.0
+#   safety_dist: 0.35

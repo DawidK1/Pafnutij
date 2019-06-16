@@ -1,0 +1,13 @@
+<launch>
+
+  <node pkg="move_base" type="move_base" respawn="true" name="move_base" output="screen" >
+    <remap from="odom" to="odom_wheel"/>
+    <rosparam file="$(find uadr_launches)/params/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+    <rosparam file="$(find uadr_launches)/params/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+    <rosparam file="$(find uadr_launches)/params/local_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find uadr_launches)/params/global_costmap_params.yaml" command="load"/>
+    <rosparam file="$(find uadr_launches)/params/dwa_local_planner_params.yaml" command="load"/>
+    <rosparam file="$(find uadr_launches)/params/move_base_params.yaml" command="load"/>
+  </node>
+
+</launch>
