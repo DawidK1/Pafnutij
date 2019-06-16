@@ -28,7 +28,7 @@ def set_wheels(left, right, caster):
         l_dir = 0
     if right < 0:
         r_dir = 0
-    caster += 0.03
+    caster += 0.05
 
     caster = saturate(caster)
     left = saturate(left)
