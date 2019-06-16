@@ -3,6 +3,7 @@
 <include file="$(find uadr_launches)/launch/hardware.launch"/>
 <include file="$(find uadr_launches)/launch/csm.launch"/>
 <include file="$(find uadr_launches)/launch/amcl.launch"/>
+<include file="$(find uadr_launches)/launch/move_base.launch"/>
  <arg name="map_file" default="$(find uadr_launches)/maps/flat1.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" respawn="false" />
 </launch>
