@@ -37,11 +37,16 @@ def set_wheels(left, right, caster):
     caster = saturate(caster)
     left = saturate(left)
     right = saturate(right)
+    try:
+        bus.write_byte_data(DEV_ADDR, LEFT_WHEEL_ADDR,
+                            abs(int(left*16)*2) + l_dir)
+        bus.write_byte_data(DEV_ADDR, RIGHT_WHEEL_ADDR,
+                            abs(int(right*16)*2) + r_dir)
+        bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR,
+                            int((-caster + 1.0)*115))
 
-    bus.write_byte_data(DEV_ADDR, LEFT_WHEEL_ADDR, abs(int(left*16)*2) + l_dir)
-    bus.write_byte_data(DEV_ADDR, RIGHT_WHEEL_ADDR,
-                        abs(int(right*16)*2) + r_dir)
-    bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1.0)*115))
+    except Exception as e:
+        print(e)
 
 
 def cmd_vel_callback(data):
@@ -58,6 +63,7 @@ def cmd_vel_callback(data):
     else:
         caster_pos = 0
     set_wheels(vel_left, vel_right, caster_pos)
+
 
 rospy.init_node("atmega_driver")
 
