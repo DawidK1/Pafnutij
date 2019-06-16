@@ -4,6 +4,7 @@ from smbus import SMBus
 import rospy
 import numpy
 from time import sleep
+from geometry_msgs.msg import Twist
 
 DEV_ADDR = 0x44
 LEFT_WHEEL_ADDR = 1
@@ -43,6 +44,21 @@ def set_wheels(left, right, caster):
                         abs(int(right*16)*2) + r_dir)
     bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1.0)*128))
 
+
+def cmd_vel_callback(data):
+    data = Twist()
+
+    vel_left = (data.linear.x - numpy.sin(data.angular.z) /
+                (2*WHEEL_WIDTH))/MAX_TRANS_SPEED
+    vel_right = (data.linear.x + numpy.sin(data.angular.z) /
+                 (2*WHEEL_WIDTH))/MAX_TRANS_SPEED
+
+    sum_of_wheels = abs(vel_left) + abs(vel_right)
+    if sum_of_wheels > 0:
+        caster_pos = (vel_left - vel_right)/sum_of_wheels
+    else:
+        caster_pos = 0
+    set_wheels(vel_left, vel_right, caster_pos)
 
 # for i in numpy.linspace(-1, 1, 60):
 #     set_wheels(i, i, i)
