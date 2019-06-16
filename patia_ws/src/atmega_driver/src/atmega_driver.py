@@ -32,7 +32,6 @@ def set_wheels(left, right, caster):
         l_dir = 0
     if right < 0:
         r_dir = 0
-    caster += 0.104
 
     caster = saturate(caster)
     left = saturate(left)
@@ -41,14 +40,17 @@ def set_wheels(left, right, caster):
     bus.write_byte_data(DEV_ADDR, LEFT_WHEEL_ADDR, abs(int(left*16)*2) + l_dir)
     bus.write_byte_data(DEV_ADDR, RIGHT_WHEEL_ADDR,
                         abs(int(right*16)*2) + r_dir)
-    bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1.0)*128))
+    bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1.0)*115))
 
 
 # for i in numpy.linspace(-1, 1, 60):
 #     set_wheels(i, i, i)
 #     sleep(1.0)
+#set_wheels(0, 0, 0)
+
+set_wheels(1, -1, -1)
+sleep(3)
+#set_wheels(0,0,-1)
+sleep(1)
 set_wheels(0, 0, 0)
 
-set_wheels(1, 1, -1)
-sleep(5)
-set_wheels(0, 0, 0)
