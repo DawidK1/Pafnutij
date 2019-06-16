@@ -387,6 +387,56 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory atmega_driver
+
+# Convenience name for "all" pass in the directory.
+atmega_driver/all:
+
+.PHONY : atmega_driver/all
+
+# Convenience name for "clean" pass in the directory.
+atmega_driver/clean: atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : atmega_driver/clean
+
+# Convenience name for "preinstall" pass in the directory.
+atmega_driver/preinstall:
+
+.PHONY : atmega_driver/preinstall
+
+#=============================================================================
+# Target rules for target atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/build.make atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/build.make atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pafnutij/patia_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pafnutij/patia_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pafnutij/patia_ws/build/CMakeFiles 0
+.PHONY : atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/build.make atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+# clean rule for target.
+clean: atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory uadr_launches
 
 # Convenience name for "all" pass in the directory.

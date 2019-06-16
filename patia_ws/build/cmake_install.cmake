@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/dawid/Pafnutij/patia_ws/build/gtest/cmake_install.cmake")
+  include("/home/dawid/Pafnutij/patia_ws/build/atmega_driver/cmake_install.cmake")
   include("/home/dawid/Pafnutij/patia_ws/build/uadr_launches/cmake_install.cmake")
 
 endif()

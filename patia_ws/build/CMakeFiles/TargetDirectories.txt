@@ -28,6 +28,14 @@
 /home/dawid/Pafnutij/patia_ws/build/gtest/gtest/CMakeFiles/gtest_main.dir
 /home/dawid/Pafnutij/patia_ws/build/gtest/gtest/CMakeFiles/install/strip.dir
 /home/dawid/Pafnutij/patia_ws/build/gtest/gtest/CMakeFiles/install/local.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/rebuild_cache.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/edit_cache.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/list_install_components.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/install.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/install/local.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/install/strip.dir
+/home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/test.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/install.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/rebuild_cache.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/edit_cache.dir
