@@ -45,7 +45,7 @@ def set_wheels(left, right, caster):
 
 
 def cmd_vel_callback(data):
-    data = Twist()
+    # data = Twist()
 
     vel_left = (data.linear.x - numpy.sin(data.angular.z) /
                 (2*WHEEL_WIDTH))/MAX_TRANS_SPEED
@@ -59,14 +59,12 @@ def cmd_vel_callback(data):
         caster_pos = 0
     set_wheels(vel_left, vel_right, caster_pos)
 
-# for i in numpy.linspace(-1, 1, 60):
-#     set_wheels(i, i, i)
-#     sleep(1.0)
-#set_wheels(0, 0, 0)
+rospy.init_node("atmega_driver")
+
+rospy.Subscriber("cmd_vel", Twist, cmd_vel_callback)
+rospy.spin()
 
 set_wheels(1, -1, -1)
 sleep(3)
-#set_wheels(0,0,-1)
 sleep(1)
 set_wheels(0, 0, 0)
-
