@@ -23,7 +23,7 @@ def set_wheels(left, right, caster):
 
     bus.write_byte_data(DEV_ADDR, LEFT_WHEEL_ADDR, abs(int(left*31)) + l_dir)
     bus.write_byte_data(DEV_ADDR, RIGHT_WHEEL_ADDR, abs(int(right*31)) + r_dir)
-    bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, (-caster + 1)*255)
+    bus.write_byte_data(DEV_ADDR, CASTER_WHEEL_ADDR, int((-caster + 1)*255))
 
 for i in numpy.linspace(-1, 1, 60):
     set_wheels(i, i, i)
