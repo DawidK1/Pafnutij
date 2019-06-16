@@ -21,8 +21,8 @@
     <param name="srt" value="0.2"/>
     <param name="str" value="0.1"/>
     <param name="stt" value="0.2"/>
-    <param name="linearUpdate" value="0.05"/>
-    <param name="angularUpdate" value="0.05"/>
+    <param name="linearUpdate" value="0.00"/>
+    <param name="angularUpdate" value="0.00"/>
     <param name="temporalUpdate" value="0.5"/>
     <param name="resampleThreshold" value="0.5"/>
     <param name="particles" value="30"/>
