@@ -10,6 +10,10 @@ LEFT_WHEEL_ADDR = 1
 RIGHT_WHEEL_ADDR = 2
 CASTER_WHEEL_ADDR = 3
 
+MAX_TRANS_SPEED = 0.56
+WHEEL_WIDTH = 0.145
+
+
 bus = SMBus(1)
 
 
@@ -45,6 +49,6 @@ def set_wheels(left, right, caster):
 #     sleep(1.0)
 set_wheels(0, 0, 0)
 
-set_wheels(1, 1, 0)
+set_wheels(1, 1, -1)
 sleep(5)
 set_wheels(0, 0, 0)
