@@ -17,6 +17,8 @@ WHEEL_WIDTH = 0.145
 
 bus = SMBus(1)
 
+last_update = 0
+
 
 def saturate(a):
     if a > 1:
@@ -50,8 +52,9 @@ def set_wheels(left, right, caster):
 
 
 def cmd_vel_callback(data):
+    global last_update
     # data = Twist()
-
+    last_update = rospy.get_time()
     vel_left = (data.linear.x - numpy.sin(data.angular.z) /
                 (2*WHEEL_WIDTH))/MAX_TRANS_SPEED
     vel_right = (data.linear.x + numpy.sin(data.angular.z) /
@@ -68,8 +71,11 @@ def cmd_vel_callback(data):
 rospy.init_node("atmega_driver")
 
 rospy.Subscriber("cmd_vel", Twist, cmd_vel_callback)
-rospy.spin()
-
+rate = rospy.Rate(3)
+while not rospy.is_shutdown():
+    if rospy.get_time() - last_update:
+        set_wheels(0, 0, 0)
+    rate.sleep()
 # set_wheels(1, -1, -1)
 # sleep(3)
 # sleep(1)
