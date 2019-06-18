@@ -62,7 +62,7 @@ def cmd_vel_callback(data):
 
     sum_of_wheels = abs(vel_left) + abs(vel_right)
     if sum_of_wheels > 0:
-        caster_pos = (vel_left - vel_right)/sum_of_wheels
+        caster_pos = (vel_right - vel_left)/sum_of_wheels
     else:
         caster_pos = 0
     set_wheels(vel_left, vel_right, caster_pos)
