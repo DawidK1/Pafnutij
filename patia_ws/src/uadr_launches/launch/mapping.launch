@@ -1,5 +1,10 @@
 <launch>
 
+
+<include file="$(find uadr_launches)/launch/hardware.launch"/>
+<include file="$(find uadr_launches)/launch/csm.launch"/>
+
+
   <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
     <remap from="/base_scan" to="/scan"/>
 
