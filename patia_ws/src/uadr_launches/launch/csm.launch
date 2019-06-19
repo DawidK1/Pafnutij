@@ -16,7 +16,7 @@
     <param name="kf_dist_angular" value=".2"/>
 
     <param name="max_iterations" value="11"/>
-    <param name="max_correspondence_dist" value="100.0"/>
+    <param name="max_correspondence_dist" value="1.0"/>
     <param name="max_angular_correction_deg" value="120"/>
     <param name="max_linear_correction" value="2.0"/>
     <param name="epsilon_xy" value="0.000001"/>
