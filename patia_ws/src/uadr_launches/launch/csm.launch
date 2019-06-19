@@ -15,12 +15,12 @@
     <param name="kf_dist_linear" value=".2"/>
     <param name="kf_dist_angular" value=".2"/>
 
-    <param name="max_iterations" value="7"/>
+    <param name="max_iterations" value="11"/>
     <param name="max_correspondence_dist" value="100.0"/>
     <param name="max_angular_correction_deg" value="120"/>
     <param name="max_linear_correction" value="2.0"/>
-    <!--<param name="epsilon_xy" value="0.000001"/>
-    <param name="epsilon_theta" value="0.0000001"/>-->
+    <param name="epsilon_xy" value="0.000001"/>
+    <param name="epsilon_theta" value="0.0000001"/>
         <param name="epsilon_xy" value="0.001"/>
     <param name="epsilon_theta" value="0.001"/>
     <param name="outliers_maxPercs" value="0.9"/>
