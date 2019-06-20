@@ -437,6 +437,24 @@ clean: atmega_driver/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory patia_logic
+
+# Convenience name for "all" pass in the directory.
+patia_logic/all:
+
+.PHONY : patia_logic/all
+
+# Convenience name for "clean" pass in the directory.
+patia_logic/clean:
+
+.PHONY : patia_logic/clean
+
+# Convenience name for "preinstall" pass in the directory.
+patia_logic/preinstall:
+
+.PHONY : patia_logic/preinstall
+
+#=============================================================================
 # Directory level rules for directory uadr_launches
 
 # Convenience name for "all" pass in the directory.

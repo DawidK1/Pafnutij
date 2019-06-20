@@ -1,2 +1,2 @@
-atmega_driver:uadr_launches
+atmega_driver:patia_logic:uadr_launches
 -DCATKIN_DEVEL_PREFIX=/home/dawid/Pafnutij/patia_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dawid/Pafnutij/patia_ws/install -G Unix Makefiles

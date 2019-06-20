@@ -36,6 +36,13 @@
 /home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/test.dir
 /home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/install/local.dir
 /home/dawid/Pafnutij/patia_ws/build/atmega_driver/CMakeFiles/install.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/rebuild_cache.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/edit_cache.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/install/strip.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/install/local.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/install.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/test.dir
+/home/dawid/Pafnutij/patia_ws/build/patia_logic/CMakeFiles/list_install_components.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/rebuild_cache.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/test.dir
 /home/dawid/Pafnutij/patia_ws/build/uadr_launches/CMakeFiles/install.dir
