@@ -56,9 +56,9 @@ def cmd_vel_callback(data):
     # data = Twist()
     last_update = rospy.get_time()
     vel_left = (data.linear.x - data.angular.z *
-                (WHEEL_WIDTH))/MAX_TRANS_SPEED
+                (WHEEL_WIDTH)*1.4)/MAX_TRANS_SPEED
     vel_right = (data.linear.x + data.angular.z *
-                 (WHEEL_WIDTH))/MAX_TRANS_SPEED
+                 (WHEEL_WIDTH)*1.4)/MAX_TRANS_SPEED
 
     sum_of_wheels = abs(vel_left) + abs(vel_right)
     if sum_of_wheels > 0:
