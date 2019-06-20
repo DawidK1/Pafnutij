@@ -3,12 +3,12 @@ recovery_behavior_enabled: true
 clearing_rotation_allowed: false
 
 DWAPlannerROS: 
-  controller_frequency: 3.0
+  controller_frequency: 2.0
   acc_lim_theta: 28.0
   acc_lim_x: 28.0
   acc_lim_y: 0.0
   acc_limit_trans: 10
-  angular_sim_granularity: 0.1
+  angular_sim_granularity: 0.15
   forward_point_distance: 0.25
   goal_distance_bias: 24.0
   path_distance_bias: 32.0
@@ -32,7 +32,7 @@ DWAPlannerROS:
   rot_stopped_vel: 0.01
   scaling_speed: 0.25
   sim_granularity: 0.07
-  sim_time: 0.7
+  sim_time: 0.6
   state: true
   stop_time_buffer: 0.2
   trans_stopped_vel: 0.01
