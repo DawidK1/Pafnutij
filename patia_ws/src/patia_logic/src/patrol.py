@@ -25,16 +25,17 @@ next_to_pc = prep_pos(1.99, -1.02, 3.11)
 
 next_to_warderobe = prep_pos(2.33, 4.24, 1.104)
 
-poses = [next_to_door, next_to_tables, under_bed, next_to_pc, next_to_warderobe]
+poses = [next_to_door, next_to_tables,  next_to_pc]
 
 goal_pub = rospy.Publisher('/move_base_simple/goal', PoseStamped, queue_size=5)
 
 rospy.init_node("random_patrol")
 rate = rospy.Rate(1/120.0)
 while not rospy.is_shutdown():
+    sleep(10)
     next_goal = random.choice(poses)
     rospy.loginfo("Next goal!")
     next_goal.header.stamp = rospy.get_rostime()
-    print(next_goal)
     goal_pub.publish(next_goal)
+    
     rate.sleep()
