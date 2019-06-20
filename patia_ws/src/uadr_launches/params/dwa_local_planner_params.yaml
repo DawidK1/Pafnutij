@@ -13,10 +13,10 @@ DWAPlannerROS:
   goal_distance_bias: 24.0
   path_distance_bias: 32.0
   occdist_scale: 0.015
-  max_rot_vel: 2.5
+  max_rot_vel: 2.3
   max_scaling_factor: 0.2
-  max_trans_vel: 0.45
-  max_vel_x: 0.45
+  max_trans_vel: 0.37
+  max_vel_x: 0.37
   max_vel_y: 0.0
   min_rot_vel: 1.6
   min_trans_vel: 0.28
@@ -32,7 +32,7 @@ DWAPlannerROS:
   rot_stopped_vel: 0.01
   scaling_speed: 0.25
   sim_granularity: 0.07
-  sim_time: 0.6
+  sim_time: 0.7
   state: true
   stop_time_buffer: 0.2
   trans_stopped_vel: 0.01
